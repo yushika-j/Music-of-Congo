@@ -17,10 +17,23 @@ function App() {
         <li><a href="about.html">About</a></li>
       </ul>
     
-    
+      <div className='gallery'>
+        <a><img src="img.jpg" /></a>
+      </div>
+
+      <div className='gallery'>
+        <a><img src="img.jpg" /></a>
+      </div>
+
+      <div className='gallery'>
+        <a><img src="img.jpg" /></a>
+      </div>
+
+      <div className='gallery'>
+        <a><img src="img.jpg" /></a>
+      </div>
       
     
-    <footer>footer</footer>
     </div>
   )
 }
