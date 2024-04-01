@@ -8,11 +8,16 @@ ul{
 
 li{
   float: left;
-  
 } 
 
-a {
-  display:inline-block;
-  padding: 8px;
-  text-decoration : none;
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li:hover{
+  background-color: rgb(9, 102, 9);
 }
