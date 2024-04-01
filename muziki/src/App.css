@@ -1,13 +1,18 @@
-.nav-bar{
-
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #03910a;
 }
 
 li{
-  display:inline;
+  float: left;
+  
 } 
 
 a {
-  display: block;
+  display:inline-block;
   padding: 8px;
-  background-color: #dddddd;
+  text-decoration : none;
 }
