@@ -102,6 +102,8 @@ li:hover{
   margin: 20px 5%; /* This will give some space */
 
   border-bottom: 4px solid black;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .nav-navigation{
@@ -114,6 +116,27 @@ li:hover{
   font-size: xx-large;
 }
 
+.marquee-container {
+  display: flex;
+  height: 5dvh;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  border-bottom: 4px solid black;
+  margin: 20px 5%; /* This will give some space */
+  margin-top: 0;
+}
+
+.marquee-text {
+  white-space: nowrap;
+  animation: marquee 100s linear infinite;
+  padding-right: 20px;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
 
 div.gallery{
   margin: 10px;
@@ -130,3 +153,4 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
+
