@@ -46,8 +46,23 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* END OF MEYERS RESET (MEYERS RESET IS USED SO THAT THE PAGE WILL LOOK THE SAME
-  NO MATTER THE WEB BROWSER THAT THE USER USES) */
+/* -----------------------------------------------------------
+END OF MEYERS RESET (MEYERS RESET IS USED SO THAT THE PAGE WILL LOOK THE SAME
+  NO MATTER THE WEB BROWSER THAT THE USER USES) 
+  ------------------------------------------------------------*/
+.julius-sans-one-regular {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.kumbh-sans-400 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: regular;
+  font-variation-settings:
+    "YOPQ" 300;
+}
 
 body{
   background-color: white;
@@ -85,10 +100,18 @@ li:hover{
   align-items: center;
   padding-top: 20px;
   margin: 20px 5%; /* This will give some space */
+
+  border-bottom: 4px solid black;
+}
+
+.nav-navigation{
+  font-size: large;
 }
 .nav-logo{
   flex: 1;
+  padding: 14px 16px;
   display: flex;
+  font-size: xx-large;
 }
 
 

@@ -9,13 +9,13 @@ import Werrason from './assets/werrason.jpg';
 function App() {
   return (
     <div>
-      <ul className="nav-bar">
-        <div className="nav-logo">Here goes a logo or something else</div>
-        <div className="nav-navigation">
-          <li><a href="home.html">Home</a></li>
-          <li><a href="explore.html">Explore</a></li> {/* will contain songs/albums */}
-          <li><a href="login.html">Log In</a></li>
-          <li><a href="about.html">About</a></li>
+      <ul className="nav-bar julius-sans-one-regular">
+        <div className="nav-logo">MUZIKI</div>
+        <div className="nav-navigation kumbh-sans-300">
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="explore.html">EXPLORE</a></li> {/* will contain songs/albums */}
+          <li><a href="login.html">LOG IN</a></li>
+          <li><a href="about.html">ABOUT</a></li>
         </div>
       </ul>
 
