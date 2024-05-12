@@ -10,10 +10,13 @@ function App() {
   return (
     <div>
       <ul className="nav-bar">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="explore.html">Explore</a></li> {/* will contain songs/albums */}
-        <li><a href="login.html">Log In</a></li>
-        <li><a href="about.html">About</a></li>
+        <div className="nav-logo">Here goes a logo or something else</div>
+        <div className="nav-navigation">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li> {/* will contain songs/albums */}
+          <li><a href="login.html">Log In</a></li>
+          <li><a href="about.html">About</a></li>
+        </div>
       </ul>
 
       <div className='gallery'>

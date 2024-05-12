@@ -50,7 +50,7 @@ table {
   NO MATTER THE WEB BROWSER THAT THE USER USES) */
 
 body{
-  background-color: rgb(104, 177, 135);
+  background-color: white;
 }
 
 ul{
@@ -58,7 +58,7 @@ ul{
   margin-top: 6rem;
   padding: 0;
   overflow: hidden;
-  background-color: #03910a;
+  background-color: white;
 }
 
 li{
@@ -67,15 +67,30 @@ li{
 
 li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li:hover{
-  background-color: rgb(9, 102, 9);
+  background-color: rgb(206, 206, 206);
 }
+
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  margin: 20px 5%; /* This will give some space */
+}
+.nav-logo{
+  flex: 1;
+  display: flex;
+}
+
 
 div.gallery{
   margin: 10px;
