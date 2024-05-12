@@ -1,5 +1,76 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -----------------------------------------------------------
+END OF MEYERS RESET (MEYERS RESET IS USED SO THAT THE PAGE WILL LOOK THE SAME
+  NO MATTER THE WEB BROWSER THAT THE USER USES) 
+  ------------------------------------------------------------*/
+.julius-sans-one-regular {
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.kumbh-sans-400 {
+  font-family: "Kumbh Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: regular;
+  font-variation-settings:
+    "YOPQ" 300;
+}
+.rowdies-bold {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 body{
-  background-color: rgb(104, 177, 135);
+  background-color: white;
 }
 
 ul{
@@ -7,7 +78,7 @@ ul{
   margin-top: 6rem;
   padding: 0;
   overflow: hidden;
-  background-color: #03910a;
+  background-color: white;
 }
 
 li{
@@ -16,14 +87,80 @@ li{
 
 li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li:hover{
-  background-color: rgb(9, 102, 9);
+  background-color: rgb(206, 206, 206);
+}
+
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+
+  margin: 20px 5%; /* This will give some space */
+  border-bottom: 4px solid black;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.nav-navigation{
+  font-size: large;
+}
+.nav-logo{
+  flex: 1;
+  padding: 14px 16px;
+  display: flex;
+  font-size: xx-large;
+}
+
+.marquee-container {
+  display: flex;
+  height: 5dvh;
+  flex-direction: row;
+  overflow: hidden;
+  align-items: center;
+  border-bottom: 4px solid black;
+  margin: 20px 5%; /* This will give some space */
+  margin-top: 0;
+}
+
+.marquee-text {
+  white-space: nowrap;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  animation: marquee 100s linear infinite;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.home-video-container{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 50dvh;
+  padding-top: 20px;
+
+  margin: 20px 5%; /* This will give some space */
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.home-video-container>.left{
+  display: flex;
+  flex-direction: column;
+  font-size: 7rem;
 }
 
 div.gallery{
@@ -41,3 +178,4 @@ div.desc {
   padding: 15px;
   text-align: center;
 }
+
