@@ -15,6 +15,7 @@ function App() {
         <li><a href="login.html">Log In</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
+      
 
       <div className='gallery'>
         <img src={FerreGola} alt="Ferre Gola" />
