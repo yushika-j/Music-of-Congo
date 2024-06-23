@@ -2,11 +2,11 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import FerreGola from '../assets/ferre gola.jpg';
-import Franco from '../assets/franco.jpg';
-import PapaWemba from '../assets/papawemba.jpg';
-import Samba from '../assets/samba.jpg';
-import Werrason from '../assets/werrason.jpg';
+import FerreGola from './assets/ferre gola.jpg';
+import Franco from './assets/franco.jpg';
+import PapaWemba from './assets/papawemba.jpg';
+import Samba from './assets/samba.jpg';
+import Werrason from './assets/werrason.jpg';
 import './Home.css';
 
 const Home = () => {
