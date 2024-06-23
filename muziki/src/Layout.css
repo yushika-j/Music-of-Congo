@@ -1,6 +1,7 @@
 /* Layout.css */
 
 body {
+  background-color: black;
     margin: 0;
     font-family: Arial, sans-serif;
   }
@@ -13,13 +14,14 @@ body {
   
   header {
     background-color: #d3d3d3;
-    color: rgb(70, 61, 61);
-    padding: 3rem;
+    color: rgb(255, 255, 255);
+    padding: 0rem;
+    align-items: left;
   }
   
   header nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   nav ul {
@@ -32,23 +34,27 @@ body {
   
   nav ul li {
     display: inline;
+    align-items: left;
   }
   
   nav ul li a {
-    color: white;
+    color: rgb(2, 2, 2);
+    padding: 1.5rem;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    width: 90px;
+    align-items: left;
   }
   
   nav ul li a:hover {
     background-color: #575757;
+    color: white;
   }
   
   main {
     flex: 1;
-    padding: 1rem;
     background-color: #f4f4f4;
   }
   
