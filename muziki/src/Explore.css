@@ -1,0 +1,46 @@
+/* Explore.css */
+
+.explore {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-filter input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.search-filter select {
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

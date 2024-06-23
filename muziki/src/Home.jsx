@@ -7,6 +7,7 @@ import Franco from './assets/franco.jpg';
 import PapaWemba from './assets/papawemba.jpg';
 import Samba from './assets/samba.jpg';
 import Werrason from './assets/werrason.jpg';
+import MaitreGims from './assets/maitregims.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -48,6 +49,9 @@ const Home = () => {
                         </div>
                         <div>
                             <img src={Werrason} alt="Werrason" />
+                        </div>
+                        <div>
+                            <img src={MaitreGims} alt="MaitreGims" />
                         </div>
                     </Slider>
                 </div>
