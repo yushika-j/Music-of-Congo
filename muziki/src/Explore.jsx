@@ -13,6 +13,12 @@ const Explore = () => {
         setFilter(event.target.value);
     };
 
+    // Define the data for artists, genres, top songs, and new releases
+    const artists = ['Fally Ipupa', 'Koffi Olomide', 'Awilo Longomba', 'Papa Wemba'];
+    const genres = ['Soukous', 'Rumba', 'Ndombolo', 'Afrobeat'];
+    const topSongs = [ 'Liputa', 'Gorah', 'MH', 'Olandi'];
+    const newReleases = ['Album 1', 'Album 2', 'Album 3', 'Album 4'];
+
     return (
         <div className="explore">
             <h1>Explore Music of Congo</h1>
@@ -36,36 +42,36 @@ const Explore = () => {
             <section className="featured">
                 <h2>Featured Artists</h2>
                 <div className="cards">
-                    <div className="card">Artist 1</div>
-                    <div className="card">Artist 2</div>
-                    <div className="card">Artist 3</div>
+                    {artists.map((artist, index) => (
+                        <div className="card" key={index}>{artist}</div>
+                    ))}
                 </div>
             </section>
             
             <section className="genres">
                 <h2>Genres</h2>
                 <div className="cards">
-                    <div className="card">Soukous</div>
-                    <div className="card">Rumba</div>
-                    <div className="card">Ndombolo</div>
+                    {genres.map((genre, index) => (
+                        <div className="card" key={index}>{genre}</div>
+                    ))}
                 </div>
             </section>
             
             <section className="top-songs">
                 <h2>Top Songs</h2>
                 <div className="cards">
-                    <div className="card">Song 1</div>
-                    <div className="card">Song 2</div>
-                    <div className="card">Song 3</div>
+                    {topSongs.map((song, index) => (
+                        <div className="card" key={index}>{song}</div>
+                    ))}
                 </div>
             </section>
             
             <section className="new-releases">
                 <h2>New Releases</h2>
                 <div className="cards">
-                    <div className="card">Album 1</div>
-                    <div className="card">Album 2</div>
-                    <div className="card">Album 3</div>
+                    {newReleases.map((album, index) => (
+                        <div className="card" key={index}>{album}</div>
+                    ))}
                 </div>
             </section>
         </div>
