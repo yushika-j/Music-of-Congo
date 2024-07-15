@@ -106,6 +106,7 @@ li:hover{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
   font-weight: bold;
   animation: marquee 100s linear infinite;
+  animation-delay: 0s;
   padding-top: 10px;
   padding-bottom: 10px;
   
@@ -136,6 +137,22 @@ li:hover{
 	height: 460px; 
 	object-fit: cover; 
 	border-radius: 2px;
+}
+.musiki{
+  font-family: 'Rowdies', sans-serif;
+  margin-top: 5px;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 8rem;
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% {color: #ff0000;}
+  25% {color: #ff00ff;}
+  50% {color: #0000ff;}
+  75% {color: #0b6d10;}
+  100% {color: #a39300;}
 }
 
 div.gallery{

@@ -24,15 +24,15 @@ const Home = () => {
     return (
         <div className="body">
             <div className="marquee-container">
-                <h1 className="marquee-text">
-                    AFROBEAT—HIGHLIFE—JUJU—MAKOSSA—MBALAX—SOUKOUS—BENGA—TAARAB—KWAITO—FUJI—GENGE—ZOUK—COUPE DECALE—AFRO HOUSE—BONGO FLAVA—CHIMURENGA—AFRO POP—AFRICAN JAZZ—AFRO-SOUL—GOSPEL MUSIC—AFROBEAT—HIGHLIFE—JUJU—MAKOSSA—MBALAX—SOUKOUS—BENGA—TAARAB—KWAITO—FUJI—GENGE—ZOUK—COUPE DECALE—AFRO HOUSE—BONGO FLAVA—CHIMURENGA—AFRO POP—AFRICAN JAZZ—AFRO-SOUL—GOSPEL MUSIC
-                </h1>
+                <h1 className="marquee-text">AFROBEAT—HIGHLIFE—JUJU—MAKOSSA—MBALAX—SOUKOUS—BENGA—TAARAB—KWAITO—FUJI—GENGE—ZOUK—COUPE DECALE—AFRO HOUSE—BONGO FLAVA—CHIMURENGA—AFRO POP—AFRICAN JAZZ—AFRO-SOUL—GOSPEL MUSIC—AFROBEAT—HIGHLIFE—JUJU—MAKOSSA—MBALAX—SOUKOUS—BENGA—TAARAB—KWAITO—FUJI—GENGE—ZOUK—COUPE DECALE—AFRO HOUSE—BONGO FLAVA—CHIMURENGA—AFRO POP—AFRICAN JAZZ—AFRO-SOUL—GOSPEL MUSIC</h1>
             </div>
 
             <div className="home-video-container julius-sans-one-regular">
                 <div className="left">
-                    WE HAVE SOME GOOD MUSIKI
+                    WE HAVE SOME GOOD 
+                    <h1 className='musiki'>MUSIKI</h1>
                 </div>
+                
                 <div className="right">
                     <Slider {...settings}>
                         <div>
