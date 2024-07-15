@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Explore.css';
+import { data } from './songs';
 
 const Explore = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -13,11 +14,20 @@ const Explore = () => {
         setFilter(event.target.value);
     };
 
-    // Define the data for artists, genres, top songs, and new releases
-    const artists = ['Fally Ipupa', 'Koffi Olomide', 'Awilo Longomba', 'Papa Wemba'];
-    const genres = ['Soukous', 'Rumba', 'Ndombolo', 'Afrobeat'];
-    const topSongs = [ 'Liputa', 'Gorah', 'MH', 'Olandi'];
-    const newReleases = ['Album 1', 'Album 2', 'Album 3', 'Album 4'];
+    // Filter data based on search term and filter
+    const filteredData = data.filter(song => {
+        const matchesSearch = searchTerm === '' || 
+            song.artist_name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            song.song_name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+            song.genre.toLowerCase().includes(searchTerm.toLowerCase());
+
+        const matchesFilter = filter === 'All' ||
+            (filter === 'Artists' && song.artist_name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+            (filter === 'Genres' && song.genre.toLowerCase().includes(searchTerm.toLowerCase())) ||
+            (filter === 'Top Songs' && song.song_name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+        return matchesSearch && matchesFilter;
+    });
 
     return (
         <div className="explore">
@@ -38,8 +48,33 @@ const Explore = () => {
                     <option value="New Releases">New Releases</option>
                 </select>
             </div>
-            
-            <section className="featured">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Artist</th>
+                        <th>Song</th>
+                        <th>Genre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {filteredData.map((song, index) => (
+                        <tr key={index}>
+                            <td>{song.artist_name}</td>
+                            <td>{song.song_name}</td>
+                            <td>{song.genre}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
+
+
+
+            {
+                /* <section className="featured">
                 <h2>Featured Artists</h2>
                 <div className="cards">
                     {artists.map((artist, index) => (
@@ -73,9 +108,8 @@ const Explore = () => {
                         <div className="card" key={index}>{album}</div>
                     ))}
                 </div>
-            </section>
-        </div>
-    );
-};
+            </section> */
+        }
+            
 
 export default Explore;

@@ -12,12 +12,16 @@
 }
 
 .search-filter input {
+    color:black;
+    background-color: rgb(223, 217, 217);
     width: 70%;
     padding: 10px;
     font-size: 16px;
 }
 
 .search-filter select {
+    color: black;
+    background-color: rgb(223, 217, 217);
     width: 25%;
     padding: 10px;
     font-size: 16px;
