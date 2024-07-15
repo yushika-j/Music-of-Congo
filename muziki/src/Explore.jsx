@@ -11,10 +11,6 @@ const Explore = () => {
         setSearchTerm(event.target.value);
     };
 
-    const handleFilterChange = (event) => {
-        setFilter(event.target.value);
-    };
-
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
     };
@@ -55,10 +51,10 @@ const Explore = () => {
             default:
                 return filteredData.map((song, index) => (
                     
-                    <tr>
-                        <td key={index}>{song.artist_name}</td>
-                        <td key={index}>{song.song_name}</td>
-                        <td key={index}>{song.genre}</td>
+                    <tr className="all-cards">
+                        <td>{song.artist_name}</td>
+                        <td>{song.song_name}</td>
+                        <td>{song.genre}</td>
                     </tr>
                     
                 ));
@@ -89,7 +85,7 @@ const Explore = () => {
             {selectedCategory === 'All' ? (
                 <table className='table'>
                     <thead>
-                        <tr>
+                        <tr className='header'>
                             <th>Artist</th>
                             <th>Song</th>
                             <th>Genre</th>
