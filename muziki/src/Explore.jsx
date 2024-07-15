@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './Explore.css';
-import { data } from './songs';
+import { data, artists, genres, topSongs, newReleases } from './songs';
 
 const Explore = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [filter, setFilter] = useState('All');
+    const [selectedCategory, setSelectedCategory] = useState('All');
 
     const handleSearchChange = (event) => {
         setSearchTerm(event.target.value);
@@ -12,6 +13,10 @@ const Explore = () => {
 
     const handleFilterChange = (event) => {
         setFilter(event.target.value);
+    };
+
+    const handleCategoryClick = (category) => {
+        setSelectedCategory(category);
     };
 
     // Filter data based on search term and filter
@@ -29,6 +34,37 @@ const Explore = () => {
         return matchesSearch && matchesFilter;
     });
 
+    const renderCategory = () => {
+        switch (selectedCategory) {
+            case 'All':
+                return filteredData.map((song, index) => (
+                    <tr className='all-cards'>
+                        <td key={index}>{song.artist_name}</td>
+                        <td key={index}>{song.song_name}</td>
+                        <td key={index}>{song.genre}</td>
+                    </tr>
+                ));
+            case 'Artists':
+                return artists.map((artist, index) => <div className="card" key={index}>{artist}</div>);
+            case 'Genres':
+                return genres.map((genre, index) => <div className="card" key={index}>{genre}</div>);
+            case 'Top Songs':
+                return topSongs.map((song, index) => <div className="card" key={index}>{song}</div>);
+            case 'New Releases':
+                return newReleases.map((album, index) => <div className="card" key={index}>{album}</div>);
+            default:
+                return filteredData.map((song, index) => (
+                    
+                    <tr>
+                        <td key={index}>{song.artist_name}</td>
+                        <td key={index}>{song.song_name}</td>
+                        <td key={index}>{song.genre}</td>
+                    </tr>
+                    
+                ));
+        }
+    };
+
     return (
         <div className="explore">
             <h1>Explore Music of Congo</h1>
@@ -40,76 +76,36 @@ const Explore = () => {
                     value={searchTerm}
                     onChange={handleSearchChange}
                 />
-                <select value={filter} onChange={handleFilterChange}>
-                    <option value="All">All</option>
-                    <option value="Artists">Artists</option>
-                    <option value="Genres">Genres</option>
-                    <option value="Top Songs">Top Songs</option>
-                    <option value="New Releases">New Releases</option>
-                </select>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Artist</th>
-                        <th>Song</th>
-                        <th>Genre</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {filteredData.map((song, index) => (
-                        <tr key={index}>
-                            <td>{song.artist_name}</td>
-                            <td>{song.song_name}</td>
-                            <td>{song.genre}</td>
+            <div className="category-buttons">
+                <button onClick={() => handleCategoryClick('All')}>All</button>
+                <button onClick={() => handleCategoryClick('Artists')}>Artists</button>
+                <button onClick={() => handleCategoryClick('Genres')}>Genres</button>
+                <button onClick={() => handleCategoryClick('Top Songs')}>Top Songs</button>
+                <button onClick={() => handleCategoryClick('New Releases')}>New Releases</button>
+            </div>
+
+            {selectedCategory === 'All' ? (
+                <table className='table'>
+                    <thead>
+                        <tr>
+                            <th>Artist</th>
+                            <th>Song</th>
+                            <th>Genre</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody className='all-cards'>
+                        {renderCategory()}
+                    </tbody>
+                </table>
+            ) : (
+                <div className="cards">
+                    {renderCategory()}
+                </div>
+            )}
         </div>
     );
 };
-
-
-
-            {
-                /* <section className="featured">
-                <h2>Featured Artists</h2>
-                <div className="cards">
-                    {artists.map((artist, index) => (
-                        <div className="card" key={index}>{artist}</div>
-                    ))}
-                </div>
-            </section>
-            
-            <section className="genres">
-                <h2>Genres</h2>
-                <div className="cards">
-                    {genres.map((genre, index) => (
-                        <div className="card" key={index}>{genre}</div>
-                    ))}
-                </div>
-            </section>
-            
-            <section className="top-songs">
-                <h2>Top Songs</h2>
-                <div className="cards">
-                    {topSongs.map((song, index) => (
-                        <div className="card" key={index}>{song}</div>
-                    ))}
-                </div>
-            </section>
-            
-            <section className="new-releases">
-                <h2>New Releases</h2>
-                <div className="cards">
-                    {newReleases.map((album, index) => (
-                        <div className="card" key={index}>{album}</div>
-                    ))}
-                </div>
-            </section> */
-        }
-            
 
 export default Explore;
