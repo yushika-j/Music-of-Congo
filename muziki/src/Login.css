@@ -1,8 +1,11 @@
 
-
+body{
+    background-color: rgb(255, 255, 255);
+}
 .login-container {
     align-items: center;
     padding: 60px;
+    margin: 0 auto;
 }
 
 .login-container h1 {
