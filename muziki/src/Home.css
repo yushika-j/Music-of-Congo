@@ -18,6 +18,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  background-color: rgb(255, 255, 255);
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -62,7 +63,7 @@ table {
 }
 
 body{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 ul{
@@ -79,20 +80,20 @@ li{
 
 li a {
   display: block;
-  color: black;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li:hover{
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(255, 255, 255);
 }
 
 
 .marquee-container {
   display: flex;
-  height: 5dvh;
+  height: 6dvh;
   flex-direction: row;
   overflow: hidden;
   align-items: center;
@@ -105,7 +106,7 @@ li:hover{
   white-space: nowrap;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
   font-weight: bold;
-  animation: marquee 100s linear infinite;
+  animation: marquee 80s linear infinite;
   animation-delay: 0s;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -113,8 +114,8 @@ li:hover{
 }
 
 @keyframes marquee {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+  0%   { text-indent: 0em }
+  100% { text-indent: -150em }
 }
 
 .home-video-container{
