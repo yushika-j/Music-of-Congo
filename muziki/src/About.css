@@ -37,6 +37,11 @@
     flex-direction: column;
 }
 
+.contact-section {
+    display: flex; 
+    align-items: center; 
+  }
+
 .aboutT1{
     margin-bottom: 2rem;
 }
