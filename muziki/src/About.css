@@ -1,0 +1,43 @@
+.kode-mono-400 {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.tac-one-regular {
+    font-family: "Tac One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.aboutContainer{
+    display: flex;
+    height: 100dvh;
+    width: 100dvw;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.bigTitle{
+    margin-top: 2rem;
+    font-size: 10rem;
+    border-bottom: solid 0.8rem black;
+    margin-bottom: 4rem;
+}
+
+.aboutText{
+    font-size: larger;
+    display: flex;
+    margin-left:clamp(8rem,10rem,10rem);
+    margin-right: clamp(8rem,10rem,10rem);
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.aboutT1{
+    margin-bottom: 2rem;
+}
+
