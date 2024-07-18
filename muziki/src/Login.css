@@ -68,6 +68,7 @@ body{
     align-items: center;
     width: 50%;
     margin-bottom: 10px;
+    align-items: baseline;
 }
 
 .remember-me-label {
@@ -75,12 +76,20 @@ body{
     align-items: center;
     margin:0px;
     padding: 0%;
+    align-items: baseline;
 }
 
 .remember-me-label .remember-me span{
+    display: flex;
     margin-right: 0px;
     padding: 0%;
     font-size: 14px;
+    align-items: baseline;
+}
+
+.remember{
+    width:9.8rem;
+    height: fit-content;
 }
 
 .forgot-password {
@@ -92,3 +101,4 @@ body{
 .forgot-password:hover {
     text-decoration: underline;
 }
+

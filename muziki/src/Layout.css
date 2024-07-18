@@ -4,13 +4,8 @@ body {
   background-color: black;
     margin: 0;
     font-family: Arial, sans-serif;
-  }
+}
   
-  .layout {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
   
   header {
     background-color: #d3d3d3;
@@ -53,10 +48,7 @@ body {
     color: white;
   }
   
-  main {
-    flex: 1;
-    background-color: #f4f4f4;
-  }
+
   
   footer {
     background-color: #333;
